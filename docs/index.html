@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BrowseFleetMCP</title>
+    <meta
+      name="description"
+      content="BrowseFleetMCP setup docs for install, CLI usage, Codex, Cursor, Claude Code, and Claude Desktop."
+    />
+    <meta name="theme-color" content="#142028" />
+    <link rel="canonical" href="https://jakubjdolezal.github.io/browsermcp/" />
+    <meta property="og:title" content="BrowseFleetMCP" />
+    <meta
+      property="og:description"
+      content="Set up BrowseFleetMCP for Codex, Cursor, Claude, Claude Desktop, and direct CLI usage."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jakubjdolezal.github.io/browsermcp/" />
+    <meta
+      property="og:image"
+      content="https://jakubjdolezal.github.io/browsermcp/assets/social-card.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BrowseFleetMCP" />
+    <meta
+      name="twitter:description"
+      content="Local browser automation over MCP with install, client config, CLI, and Claude Desktop docs."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jakubjdolezal.github.io/browsermcp/assets/social-card.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html" aria-label="BrowseFleetMCP home">
+          <img src="./assets/fleet-mark.svg" alt="" />
+          <span>BrowseFleetMCP</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a data-nav-link href="./install.html">Install</a>
+          <a data-nav-link href="./clients.html">Clients</a>
+          <a data-nav-link href="./cli.html">CLI</a>
+          <a data-nav-link href="./claude-desktop.html">Claude Desktop</a>
+          <a href="https://github.com/JakubJDolezal/browsermcp">GitHub</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" data-reveal>
+          <div class="hero-copy">
+            <div class="hero-topline">
+              <p class="status-pill">Codex · Cursor · Claude · CLI</p>
+              <p class="hero-badge">Uses your real Chrome profile</p>
+            </div>
+
+            <div class="hero-body">
+              <p class="eyebrow">Local browser automation over MCP</p>
+              <h1>One browser stack. Four client paths. Direct CLI too.</h1>
+              <p class="hero-text">
+                BrowseFleetMCP pairs a local stdio MCP server with a Chrome extension so
+                coding agents and direct shell workflows can drive your real browser with
+                isolated sessions.
+              </p>
+            </div>
+
+            <div class="hero-foot">
+              <div class="hero-actions">
+                <a class="button button-solid" href="./install.html">Start Setup</a>
+                <a class="button button-outline" href="./cli.html">Open CLI Docs</a>
+              </div>
+
+              <div class="hero-points" aria-label="Key qualities">
+                <p>Runs locally</p>
+                <p>Leased sessions</p>
+                <p>Standard stdio transport</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel">
+            <div class="panel-top">
+              <p class="panel-kicker">Choose a route</p>
+              <div class="panel-badges" aria-label="Documentation routes">
+                <span>Install</span>
+                <span>Clients</span>
+                <span>CLI</span>
+              </div>
+            </div>
+            <ol class="route-list">
+              <li><span>01</span> Build the root MCP server.</li>
+              <li><span>02</span> Build and load the Chrome extension.</li>
+              <li><span>03</span> Add the server to Codex, Cursor, Claude, or another MCP client.</li>
+              <li><span>04</span> Or run it directly from the command line.</li>
+            </ol>
+            <p class="panel-note">
+              Browser actions only work after a tab is connected from the extension popup.
+              If not, tool calls will fail with <code>No connected tab</code>.
+            </p>
+          </div>
+        </section>
+
+        <section class="signal-strip" data-reveal>
+          <div>
+            <p class="signal-label">What you install</p>
+            <h2>Server, extension, client config, or direct CLI.</h2>
+          </div>
+          <div class="signal-lines">
+            <p><strong>Root package</strong> runs the stdio MCP server and CLI.</p>
+            <p><strong>Chrome extension</strong> bridges tabs into leased sessions.</p>
+            <p><strong>Client config</strong> launches the same server from Codex, Cursor, Claude Code, or generic stdio MCP hosts.</p>
+          </div>
+        </section>
+
+        <section class="guide-links" data-reveal>
+          <div class="section-heading">
+            <p class="eyebrow">Docs Routes</p>
+            <h2>Use the page that matches the job.</h2>
+          </div>
+
+          <div class="guide-grid">
+            <a class="guide-card" href="./install.html">
+              <p class="guide-card-kicker">Install</p>
+              <h3>Build the server, load the extension, and connect the first tab.</h3>
+              <p>Start here if you want the end-to-end local setup path.</p>
+            </a>
+
+            <a class="guide-card" href="./clients.html">
+              <p class="guide-card-kicker">Clients</p>
+              <h3>Copy the right MCP config for Codex, Cursor, Claude Code, or generic stdio.</h3>
+              <p>Use this when you need the exact config file or command shape.</p>
+            </a>
+
+            <a class="guide-card" href="./cli.html">
+              <p class="guide-card-kicker">CLI</p>
+              <h3>Run BrowseFleetMCP directly with ports, broker overrides, or auth tokens.</h3>
+              <p>The CLI is first-class. It is not just an implementation detail behind MCP clients.</p>
+            </a>
+
+            <a class="guide-card" href="./claude-desktop.html">
+              <p class="guide-card-kicker">Claude Desktop</p>
+              <h3>Bundle the repo into an MCPB extension and install it in Claude Desktop.</h3>
+              <p>Use this if you want the desktop-extension route instead of manual JSON config.</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="pages" data-reveal>
+          <div class="section-heading">
+            <p class="eyebrow">GitHub Pages</p>
+            <h2>The docs site is ready for Pages, social previews, and a custom domain.</h2>
+          </div>
+
+          <div class="pages-grid">
+            <div class="pages-copy">
+              <p>
+                The workflow in <code>.github/workflows/pages.yml</code> deploys the
+                <code>docs/</code> directory directly to GitHub Pages at
+                <code>https://jakubjdolezal.github.io/browsermcp/</code>.
+              </p>
+              <p>
+              Social preview metadata is now included on the landing page and the major
+              subpages, using <code>docs/assets/social-card.png</code> generated from the
+              source card at <code>docs/assets/social-card.svg</code>.
+              </p>
+              <p>
+                For a custom domain, copy <code>docs/CNAME.example</code> to
+                <code>docs/CNAME</code>, replace it with your actual domain, then update the
+                canonical and Open Graph URLs if you want the metadata to point at the
+                custom hostname instead of the default GitHub Pages URL.
+              </p>
+            </div>
+
+            <div class="snippet-block">
+              <button class="copy-button" data-copy-target="pages-snippet">Copy</button>
+              <pre id="pages-snippet"><code>docs/
+  index.html
+  install.html
+  clients.html
+  cli.html
+  claude-desktop.html
+  CNAME.example
+  assets/social-card.png
+  assets/social-card.svg
+
+.github/workflows/pages.yml</code></pre>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>
+          BrowseFleetMCP runs locally, uses your browser profile, and stays compatible
+          with standard stdio MCP clients and direct CLI usage.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
